@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Job Posting</string>
+    <string name="CompanyName">Name of the Company</string>
+    <string name="Email">Company Email</string>
+    <string name="Phone">Phone</string>
+    <string name="Discription">Company Discription</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnJobPost">Post a Job</string>
+    <string name="btnJobData">Fetch a Job</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnDelete">Delete</string>
+    <string name="comAgreement">I agree to terms and conditions</string>
+
+    <string-array name="Job_Category">
+        <item>Category Selected</item>
+        <item>Helth</item>
+        <item>Education</item>
+        <item>IT</item>
+        <item>Business</item>
+        <item>Gov Public Administration</item>
+        <item>Art Technology</item>
+    </string-array>
+</resources>

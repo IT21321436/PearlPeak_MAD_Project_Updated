@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "215665157305",
+    "project_id": "jobportal-3f59c",
+    "storage_bucket": "jobportal-3f59c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215665157305:android:1e966313fa2f3f0cfee768",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215665157305-6kquprjo6semsnu0t3nd1914netdebsm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiAhU2NzqWPtd7LnbztpxVE67mxbA5rak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215665157305-6kquprjo6semsnu0t3nd1914netdebsm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
