@@ -54,7 +54,7 @@ class postedDetailsActivity : AppCompatActivity(){
         tvCompanyName = findViewById(R.id.tvCompanyName)
         tvCompanyEmail = findViewById(R.id.tvEmail)
         tvCompanyPhone = findViewById(R.id.tvCompanyPhone)
-        tvCompanyCategory = findViewById(R.id.tvCompanyCategory)
+//        tvCompanyCategory = findViewById(R.id.tvCompanyCategory)
         tvCompanyDiscription = findViewById(R.id.tvCompanyDiscription)
 
 
