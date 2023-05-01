@@ -50,8 +50,8 @@ class jobInsertionActivity : AppCompatActivity() {
         //getting Values
         val CompanyName = companyName.text.toString()
         val Email = companyEmail.text.toString()
-        val CompanyPhone = companyPhone.toString()
-        val CompanyCategory = companyCategory.toString()
+        val CompanyPhone = companyPhone.text.toString()
+        val CompanyCategory = companyCategory.selectedItem.toString()
         val CompanyDiscription = companyDiscription.text.toString()
         val termsAgreed = jobCheckBox.isChecked
 

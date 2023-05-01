@@ -68,7 +68,7 @@ class postedDetailsActivity : AppCompatActivity(){
         tvCompanyName.text = intent.getStringExtra("companyName")
         tvCompanyEmail.text = intent.getStringExtra("companyEmail")
         tvCompanyPhone.text = intent.getStringExtra("companyPhone")
-        tvCompanyPhone.text = intent.getStringExtra("companyCategory")
+        tvCompanyCategory.text = intent.getStringExtra("companyCategory")
         tvCompanyDiscription.text = intent.getStringExtra("companyDiscription")
 
 
