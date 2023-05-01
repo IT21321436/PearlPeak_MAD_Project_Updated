@@ -2,7 +2,8 @@
     <string name="app_name">Job Posting</string>
     <string name="CompanyName">Name of the Company</string>
     <string name="Email">Company Email</string>
-    <string name="Phone">Phone</string>
+    <string name="Phone">Company Phone</string>
+    <string name="Category">Company Category</string>
     <string name="Discription">Company Discription</string>
     <string name="btnSubmit">Submit</string>
     <string name="btnJobPost">Post a Job</string>

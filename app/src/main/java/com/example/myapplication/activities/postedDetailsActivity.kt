@@ -105,12 +105,14 @@ class postedDetailsActivity : AppCompatActivity(){
         val etCompanyName = mDialogView.findViewById<EditText>(R.id.etCompanyName)
         val etCompanyEmail = mDialogView.findViewById<EditText>(R.id.etCompanyEmail)
         val etCompanyPhone = mDialogView.findViewById<EditText>(R.id.etPhone)
+        val etCompanyCategory = mDialogView.findViewById<EditText>(R.id.etCategory)
         val etCompanyDiscription = mDialogView.findViewById<EditText>(R.id.etCompanyDiscription)
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnSubmit)
 
         etCompanyName.setText(intent.getStringExtra("companyName").toString())
         etCompanyEmail.setText(intent.getStringExtra("companyEmail").toString())
         etCompanyPhone.setText(intent.getStringExtra("companyPhone").toString())
+        etCompanyPhone.setText(intent.getStringExtra("companyCategory").toString())
         etCompanyDiscription.setText(intent.getStringExtra("companyDiscription").toString())
 
         mDialog.setTitle("Updating $companyName Record")
@@ -124,7 +126,7 @@ class postedDetailsActivity : AppCompatActivity(){
                 etCompanyName.text.toString(),
                 etCompanyEmail.text.toString(),
                 etCompanyPhone.text.toString(),
-                tvCompanyCategory.text.toString(),
+                etCompanyCategory.text.toString(),
                 etCompanyDiscription.text.toString()
 
             )
@@ -135,7 +137,7 @@ class postedDetailsActivity : AppCompatActivity(){
             tvCompanyName.text = etCompanyName.text.toString()
             tvCompanyEmail.text = etCompanyEmail.text.toString()
             tvCompanyPhone.text = etCompanyPhone.text.toString()
-            tvCompanyCategory.text = tvCompanyCategory.text
+            tvCompanyCategory.text = etCompanyCategory.text.toString()
             tvCompanyDiscription.text = etCompanyDiscription.text.toString()
 
             alertDialog.dismiss()
