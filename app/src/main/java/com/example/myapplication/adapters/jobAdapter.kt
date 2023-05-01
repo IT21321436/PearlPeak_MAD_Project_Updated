@@ -27,8 +27,8 @@ class jobAdapter(private val jobList : ArrayList<jobModel>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentUser = jobList[position]
-        holder.tvCompanyName.text = currentUser.CompanyName
+        val currentCompany = jobList[position]
+        holder.tvCompanyName.text = currentCompany.CompanyName
     }
 
     override fun getItemCount(): Int {
