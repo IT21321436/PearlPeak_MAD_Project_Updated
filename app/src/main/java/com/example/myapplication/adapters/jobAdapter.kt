@@ -29,6 +29,7 @@ class jobAdapter(private val jobList : ArrayList<jobModel>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentCompany = jobList[position]
         holder.tvCompanyName.text = currentCompany.CompanyName
+        holder.tvCompanyCount.text = jobList.size.toString()
     }
 
     override fun getItemCount(): Int {
@@ -38,6 +39,7 @@ class jobAdapter(private val jobList : ArrayList<jobModel>) :
     class ViewHolder (itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
         val tvCompanyName : TextView = itemView.findViewById(R.id.tvCompanyName)
+        val tvCompanyCount : TextView = itemView.findViewById(R.id.tvCount)
 
         init{
             itemView.setOnClickListener {

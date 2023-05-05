@@ -37,4 +37,12 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Count"
+        android:textSize="30dp"
+        android:textColor="@color/divider_grey"/>
+
 </androidx.cardview.widget.CardView>

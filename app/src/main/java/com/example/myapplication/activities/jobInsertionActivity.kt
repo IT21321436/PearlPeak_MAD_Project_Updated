@@ -42,8 +42,6 @@ class jobInsertionActivity : AppCompatActivity() {
             saveCompanyData()
         }
 
-
-
     }
 
     private fun saveCompanyData() {
