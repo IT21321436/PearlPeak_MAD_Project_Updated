@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_background"
-    tools:context=".activities.SelectionActivity">
+    tools:context=".activities.JobMainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -26,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="159dp"
         android:backgroundTint="#00BCD4"
+        android:text="@string/btnJobPost"
         android:textSize="20dp"
-        android:text="insert Data"
         app:icon="@android:drawable/ic_input_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:backgroundTint="#009688"
+        android:text="@string/btnJobData"
         android:textSize="20dp"
-        android:text="Fetch Data"
         app:icon="@android:drawable/ic_menu_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

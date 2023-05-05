@@ -23,16 +23,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.availableDetailsActivity"></activity>
-        <activity android:name=".activities.availableJobFetchingActivity"></activity>
-        <activity android:name=".activities.jobFetchingActivity"></activity>
-        <activity android:name=".activities.jobInsertionActivity"></activity>
-        <activity android:name=".activities.postedDetailsActivity"></activity>
-        <activity android:name=".activities.FetchingActivity"></activity>
-        <activity android:name=".activities.InsertionActivity"></activity>
-        <activity android:name=".activities.RegisterActivity"></activity>
-        <activity android:name=".activities.SelectionActivity"></activity>
-        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.availableDetailsActivity">
+
+        </activity>
+        <activity android:name=".activities.availableJobFetchingActivity">
+
+        </activity>
+        <activity android:name=".activities.jobFetchingActivity">
+
+        </activity>
+        <activity android:name=".activities.jobInsertionActivity">
+
+        </activity>
+        <activity android:name=".activities.postedDetailsActivity">
+
+        </activity>
+        <activity android:name=".activities.FetchingActivity">
+
+        </activity>
+        <activity android:name=".activities.InsertionActivity">
+
+        </activity>
+        <activity android:name=".activities.RegisterActivity">
+
+        </activity>
+        <activity android:name=".activities.SelectionActivity">
+
+        </activity>
+        <activity android:name=".activities.JobMainActivity">
+
+        </activity>
+        <activity android:name=".activities.MainActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

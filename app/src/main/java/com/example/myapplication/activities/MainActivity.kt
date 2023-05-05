@@ -5,28 +5,38 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.myapplication.R
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var btnInsertData: Button
-    private lateinit var btnFetchData: Button
+    private lateinit var btnEmployeeData: Button
+    private lateinit var btnEmployerData: Button
+    private lateinit var btnRatingReviewData: Button
+    private lateinit var btnContactUsData: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.posted_jobs)
+        setContentView(R.layout.activity_choice)
 
         //val firebase : DatabaseReference = FirebaseDatabase.getInstance().getReference()
 
-        btnInsertData = findViewById(R.id.btnJobPost)
-        btnFetchData = findViewById(R.id.btnJobData)
+        btnEmployeeData = findViewById(R.id.btnEmployee)
+        btnEmployerData = findViewById(R.id.btnEmployer)
+        btnRatingReviewData = findViewById(R.id.btnRatingReview)
+        btnContactUsData = findViewById(R.id.btnContactUs)
 
-        btnInsertData.setOnClickListener {
-            val intent = Intent(this, jobInsertionActivity::class.java)
+        btnEmployeeData.setOnClickListener {
+            val intent = Intent(this, SelectionActivity::class.java)
             startActivity(intent)
         }
-        btnFetchData.setOnClickListener{
-            val intent = Intent(this, jobFetchingActivity::class.java)
+        btnEmployerData.setOnClickListener{
+            val intent = Intent(this, JobMainActivity::class.java)
+            startActivity(intent)
+        }
+        btnRatingReviewData.setOnClickListener{
+            val intent = Intent(this, JobMainActivity::class.java)
+            startActivity(intent)
+        }
+        btnContactUsData.setOnClickListener{
+            val intent = Intent(this, JobMainActivity::class.java)
             startActivity(intent)
         }
     }

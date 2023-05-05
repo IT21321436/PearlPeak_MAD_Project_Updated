@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="@drawable/app_background"
-    tools:context=".InsertionActivity">
+    tools:context=".activities.InsertionActivity">
 
     <EditText
 
@@ -57,4 +57,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmpSalary" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
