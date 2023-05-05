@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Job Posting</string>
     <string name="CompanyName">Name of the Company</string>
+    <string name="username">Name</string>
     <string name="Email">Company Email</string>
     <string name="Phone">Company Phone</string>
     <string name="Category">Company Category</string>
@@ -11,6 +12,10 @@
     <string name="btnUpdate">Update</string>
     <string name="btnDelete">Delete</string>
     <string name="comAgreement">I agree to terms and conditions</string>
+    <string name="password">Password</string>
+    <string name="re_password">Re-Password</string>
+    <string name="signinbtn">LOG IN</string>
+    <string name="register">REGISTER</string>
 
     <string-array name="Job_Category">
         <item>Category Selected</item>
