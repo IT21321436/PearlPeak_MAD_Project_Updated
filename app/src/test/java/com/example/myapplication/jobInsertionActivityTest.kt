@@ -2,7 +2,6 @@ package com.example.myapplication
 
 
 import android.widget.*
-import androidx.test.ext.junit.runners.AndroidJUnit4
 
 import com.example.myapplication.activities.jobInsertionActivity
 import com.example.myapplication.models.jobModel
@@ -10,7 +9,6 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
 
 import org.mockito.Mock
 import org.mockito.Mockito
