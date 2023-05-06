@@ -11,7 +11,7 @@ package com.example.myapplication
 //import androidx.test.espresso.matcher.ViewMatchers.*
 //import androidx.test.ext.junit.runners.AndroidJUnit4
 //import com.example.myapplication.R
-//import com.example.myapplication.activities.JobMainActivity
+//import com.example.myapplication.adapters.JobMainActivity
 //import org.hamcrest.CoreMatchers.not
 //import org.junit.Assert.assertEquals
 //import org.junit.Test
