@@ -9,7 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
-import com.example.myapplication1.UseAdapter
+import com.example.myapplication.adapters.UseAdapter
+
 import com.google.firebase.database.*
 
 class SupportFetchingActivity : AppCompatActivity() {

@@ -8,7 +8,7 @@
     <string name="Discription">Company Discription</string>
     <string name="btnSubmit">Submit</string>
     <string name="btnJobPost">Post a Job</string>
-    <string name="btnJobData">Fetch a Job</string>
+    <string name="btnJobData">Fetch the Jobs</string>
     <string name="btnUpdate">Update</string>
     <string name="btnDelete">Delete</string>
     <string name="comAgreement">I agree to terms and conditions</string>

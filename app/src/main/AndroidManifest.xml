@@ -59,6 +59,19 @@
         <activity android:name=".activities.CategorySelection">
 
         </activity>
+        <activity android:name=".activities.SupportInsertionActivity">
+
+        </activity>
+        <activity android:name=".activities.SupportFetchingActivity">
+
+        </activity>
+        <activity android:name=".activities.SupportMainActivity">
+
+        </activity>
+        <activity android:name=".activities.UserDetailsActivity">
+
+        </activity>
+
 
     </application>
 

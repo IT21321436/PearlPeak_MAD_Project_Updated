@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnContactUsData.setOnClickListener{
-            val intent = Intent(this, JobMainActivity::class.java)
+            val intent = Intent(this, SupportMainActivity::class.java)
             startActivity(intent)
         }
     }
