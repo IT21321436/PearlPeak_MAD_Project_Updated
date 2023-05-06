@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.adapters.jobAdapter
+import com.example.myapplication.models.JobData
 import com.example.myapplication.models.jobModel
 import com.google.firebase.database.*
 
@@ -17,6 +18,8 @@ class jobFetchingActivity : AppCompatActivity() {
     private lateinit var tvLoadingData: TextView
     private lateinit var jobList: ArrayList<jobModel>
     private lateinit var dbRef: DatabaseReference
+    private lateinit var displayCount: String
+    private var jobData: JobData? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +29,11 @@ class jobFetchingActivity : AppCompatActivity() {
         jobRecyclerView.layoutManager = LinearLayoutManager(this)
         jobRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.tvLoadingData)
+        displayCount = findViewById<TextView>(R.id.itemCount).toString()
 
         jobList = arrayListOf<jobModel>()
+
+        jobData = JobData(JobCount = "0")
 
         getUserData()
     }
@@ -35,6 +41,7 @@ class jobFetchingActivity : AppCompatActivity() {
     private fun getUserData() {
         jobRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
+        displayCount = jobData?.JobCount.toString()
 
         dbRef = FirebaseDatabase.getInstance().getReference("JobPortal")
         dbRef.addValueEventListener(object : ValueEventListener {
