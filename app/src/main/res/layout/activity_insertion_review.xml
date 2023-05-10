@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimg2"
+    android:padding="16dp"
+    tools:context=".activities.InsertionReview">
+
+    <TextView
+        android:id="@+id/tvInsertReview"
+        android:layout_marginTop="20dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="PUBLISH REVIEW "
+        android:textColor="@color/black"
+
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/etReviewName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:layout_marginTop="200dp"
+        android:textSize="18sp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Enter name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etReviewEmail"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:hint="Enter email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReviewName" />
+
+    <EditText
+        android:id="@+id/etReviewTel"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:hint="Enter telephone number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReviewEmail" />
+
+    <EditText
+        android:id="@+id/etReviewRates"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:hint="Enter rating (1-5)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReviewTel" />
+
+    <EditText
+        android:id="@+id/etReviewComments"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:hint="Enter comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReviewRates" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Save Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReviewComments" />
+</androidx.constraintlayout.widget.ConstraintLayout>
