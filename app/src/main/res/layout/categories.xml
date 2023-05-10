@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgimg4"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.JobMainActivity">
 
         <LinearLayout
             android:orientation="vertical"
@@ -71,9 +71,10 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:src="@drawable/helthscience"
+                            android:id="@+id/ivHelth"
                             android:layout_width="@dimen/img_width_height"
-                            android:layout_height="@dimen/img_width_height"/>
+                            android:layout_height="@dimen/img_width_height"
+                            android:src="@drawable/helthscience" />
 
                         <TextView
                             android:layout_marginTop="@dimen/cardMargin"
@@ -105,9 +106,10 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:src="@drawable/education_training"
+                            android:id="@+id/ivEdu"
                             android:layout_width="@dimen/img_width_height"
-                            android:layout_height="@dimen/img_width_height"/>
+                            android:layout_height="@dimen/img_width_height"
+                            android:src="@drawable/education_training" />
 
                         <TextView
                             android:layout_marginTop="@dimen/cardMargin"
@@ -139,9 +141,10 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:src="@drawable/information_technology_icon_illustration_vector"
+                            android:id="@+id/ivIT"
                             android:layout_width="@dimen/img_width_height"
-                            android:layout_height="@dimen/img_width_height"/>
+                            android:layout_height="@dimen/img_width_height"
+                            android:src="@drawable/information_technology_icon_illustration_vector" />
 
                         <TextView
                             android:layout_marginTop="@dimen/cardMargin"
@@ -173,9 +176,10 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:src="@drawable/art_technology_communication"
+                            android:id="@+id/ivArtTechnology"
                             android:layout_width="@dimen/img_width_height"
-                            android:layout_height="@dimen/img_width_height"/>
+                            android:layout_height="@dimen/img_width_height"
+                            android:src="@drawable/art_technology_communication" />
 
                         <TextView
                             android:layout_marginTop="@dimen/cardMargin"
@@ -207,9 +211,10 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:src="@drawable/architecture"
+                            android:id="@+id/ivArchitecture"
                             android:layout_width="@dimen/img_width_height"
-                            android:layout_height="@dimen/img_width_height"/>
+                            android:layout_height="@dimen/img_width_height"
+                            android:src="@drawable/architecture" />
 
                         <TextView
                             android:layout_marginTop="@dimen/cardMargin"
@@ -241,9 +246,10 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:src="@drawable/business_finance_logo"
+                            android:id="@+id/ivBusiness"
                             android:layout_width="@dimen/img_width_height"
-                            android:layout_height="@dimen/img_width_height"/>
+                            android:layout_height="@dimen/img_width_height"
+                            android:src="@drawable/business_finance_logo" />
 
                         <TextView
                             android:layout_marginTop="@dimen/cardMargin"

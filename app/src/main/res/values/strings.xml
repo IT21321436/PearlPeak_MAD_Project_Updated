@@ -1,7 +1,23 @@
 <resources>
-
-
-    <string name="app_name1">My Application</string>
+    <string name="app_name">Job Posting</string>
+  
+    <string name="CompanyName">Name of the Company</string>
+    <string name="username">Name</string>
+    <string name="Email">Company Email</string>
+    <string name="Phone">Company Phone</string>
+    <string name="Category">Company Category</string>
+    <string name="Discription">Company Discription</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnJobPost">Post a Job</string>
+    <string name="btnJobData">Fetch the Jobs</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnDelete">Delete</string>
+    <string name="comAgreement">I agree to terms and conditions</string>
+    <string name="password">Password</string>
+    <string name="re_password">Re-Password</string>
+    <string name="signinbtn">LOG IN</string>
+    <string name="register">REGISTER</string>
+  
     <string name="tvCustomerReview">Customer Review</string>
     <string name="itemHeadCR">Sasindu Chamika</string>
     <string name="tvGoodProduct">Good Product!</string>
@@ -25,23 +41,11 @@
     <string name="tv47UP"></string>
     <string name="btnReview"></string>
     <string name="tvNameUP"></string>
-
-
-    <string name="app_name">Job Posting</string>
-    <string name="CompanyName">Name of the Company</string>
-    <string name="Email">Company Email</string>
-    <string name="Phone">Phone</string>
-    <string name="Discription">Company Discription</string>
-    <string name="btnSubmit">Submit</string>
-    <string name="btnJobPost">Post a Job</string>
-    <string name="btnJobData">Fetch a Job</string>
-    <string name="btnUpdate">Update</string>
-    <string name="btnDelete">Delete</string>
-    <string name="comAgreement">I agree to terms and conditions</string>
     <string name="tvUpdateReview">Updare Review</string>
     <string name="btnPost">Post</string>
     <string name="btnUpdateRV">Update</string>
     <string name="btnDeleteRV">Delete</string>
+
 
     <string-array name="Job_Category">
         <item>Category Selected</item>

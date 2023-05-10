@@ -9,47 +9,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgimg4"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.JobMainActivity">
 
 
     <EditText
         android:id="@+id/etCompanyName"
-        android:layout_width="350dp"
+        android:layout_width="313dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/CompanyName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etimageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="95dp"
         android:layout_height="70dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/etCompanyName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/jobFill"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/login" />
 
     <TextView
         android:id="@+id/jobFill"
         android:layout_width="185dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="40dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="85dp"
         android:text="Update Details"
         android:textColor="#FFC107"
         android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/etCompanyName"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="47dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etCompanyEmail"
-        android:layout_width="350dp"
+        android:layout_width="312dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
@@ -63,7 +74,7 @@
 
     <EditText
         android:id="@+id/etPhone"
-        android:layout_width="350dp"
+        android:layout_width="313dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
@@ -80,69 +91,42 @@
         android:layout_width="188dp"
         android:layout_height="48dp"
         android:layout_marginStart="110dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="110dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="80dp"
         android:text="@string/btnUpdate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCompanyDiscription" />
+        app:layout_constraintTop_toBottomOf="@+id/etCompanyDiscription"
+        app:layout_constraintVertical_bias="0.258" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/etCompanyDiscription"
-        android:layout_width="350dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="30dp"
+        android:layout_width="310dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/Discription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/etCategory" />
 
-    <ImageView
-        android:id="@+id/etimageView3"
-        android:layout_width="151dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/business_cooperation_and_work" />
-
-    <CheckBox
-        android:id="@+id/comcheckBox"
-        android:layout_width="347dp"
+    <EditText
+        android:id="@+id/etCategory"
+        android:layout_width="315dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="18dp"
-        android:text="@string/comAgreement"
-        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/Category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCompanyDiscription" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="52dp"
-        android:text="Insert Your Company Image"
-        android:textColor="#9C27B0"
-        app:layout_constraintBottom_toTopOf="@+id/etCompanyName"
-        app:layout_constraintEnd_toStartOf="@+id/etimageView3"
-        app:layout_constraintHorizontal_bias="0.614"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jobFill"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
