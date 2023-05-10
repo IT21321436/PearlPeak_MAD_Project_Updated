@@ -1,4 +1,32 @@
 <resources>
+
+
+    <string name="app_name1">My Application</string>
+    <string name="tvCustomerReview">Customer Review</string>
+    <string name="itemHeadCR">Sasindu Chamika</string>
+    <string name="tvGoodProduct">Good Product!</string>
+    <string name="tvDays">4 days ago</string>
+    <string name="tvPublishReview">Publish a Review</string>
+    <string name="tvNamePR">Name</string>
+    <string name="etNamePR"></string>
+    <string name="tvEmailPR">Email</string>
+    <string name="tvRatingReviewUP"></string>
+    <string name="etEmailPR"></string>
+    <string name="tvTelephonePR">Telephone Number</string>
+    <string name="etTelephonePR"></string>
+    <string name="tvRatingPR">Rating</string>
+    <string name="ratingBarPR"></string>
+    <string name="tvCommentPR">Comment</string>
+    <string name="etTextPR">Type here...</string>
+    <string name="btnSavePR">Save</string>
+    <string name="btnCancelPR">Cancel</string>
+    <string name="tvUserProfile">User Profile</string>
+    <string name="imgUP"></string>
+    <string name="tv47UP"></string>
+    <string name="btnReview"></string>
+    <string name="tvNameUP"></string>
+
+
     <string name="app_name">Job Posting</string>
     <string name="CompanyName">Name of the Company</string>
     <string name="Email">Company Email</string>
@@ -10,6 +38,10 @@
     <string name="btnUpdate">Update</string>
     <string name="btnDelete">Delete</string>
     <string name="comAgreement">I agree to terms and conditions</string>
+    <string name="tvUpdateReview">Updare Review</string>
+    <string name="btnPost">Post</string>
+    <string name="btnUpdateRV">Update</string>
+    <string name="btnDeleteRV">Delete</string>
 
     <string-array name="Job_Category">
         <item>Category Selected</item>

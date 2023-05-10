@@ -74,6 +74,7 @@ class postedDetailsActivity : AppCompatActivity(){
 
     }
 
+
     private fun deleteRecord(
         id: String
     ){
