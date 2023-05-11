@@ -62,21 +62,30 @@ class UserDetailsActivity : AppCompatActivity() {
 
     }
 
+
+
     private fun deleteRecord(
         id: String
     ){
         val dbRef = FirebaseDatabase.getInstance().getReference("Users").child(id)
-        val mTask = dbRef.removeValue()
+        android.app.AlertDialog.Builder(this)
+            .setTitle("Delete User")
+            .setMessage("Are you sure you want to delete this User record?")
+            .setPositiveButton("Yes") { _, _ ->
+                val mTask = dbRef.removeValue()
 
-        mTask.addOnSuccessListener {
-            Toast.makeText(this, "User data deleted", Toast.LENGTH_LONG).show()
+                mTask.addOnSuccessListener {
+                    Toast.makeText(this, "User data deleted", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, SupportFetchingActivity::class.java)
-            finish()
-            startActivity(intent)
-        }.addOnFailureListener{ error ->
-            Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
-        }
+                    val intent = Intent(this, SupportFetchingActivity::class.java)
+                    finish()
+                    startActivity(intent)
+                }.addOnFailureListener{ error ->
+                    Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+            .setNegativeButton("No", null)
+            .show()
     }
 
     private fun openUpdateDialog(

@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnRatingReviewData.setOnClickListener{
-            val intent = Intent(this, JobMainActivity::class.java)
+            val intent = Intent(this, RWMainActivity::class.java)
             startActivity(intent)
         }
         btnContactUsData.setOnClickListener{

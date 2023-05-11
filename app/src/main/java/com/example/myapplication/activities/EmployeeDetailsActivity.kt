@@ -16,6 +16,7 @@ private lateinit var tvEmpId: TextView
 private lateinit var tvEmpName: TextView
 private lateinit var tvEmpAge: TextView
 private lateinit var tvEmpSalary: TextView
+private lateinit var tvEmpCategory: TextView
 private lateinit var btnUpdate: Button
 private lateinit var btnDelete: Button
 
@@ -56,12 +57,14 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         val etEmpName = mDialogView.findViewById<EditText>(R.id.etEmpName)
         val etEmpAge = mDialogView.findViewById<EditText>(R.id.etEmpAge)
         val etEmpSalary = mDialogView.findViewById<EditText>(R.id.etEmpSalary)
+        val etEmpCategory = mDialogView.findViewById<EditText>(R.id.etCatspinner)
 
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
         etEmpName.setText(intent.getStringExtra("empName").toString())
         etEmpAge.setText(intent.getStringExtra("empAge").toString())
         etEmpSalary.setText(intent.getStringExtra("empSalary").toString())
+        etEmpCategory.setText(intent.getStringExtra("empCategory").toString())
 
         mDialog.setTitle("Updating $empName Record")
 
@@ -73,7 +76,8 @@ class EmployeeDetailsActivity : AppCompatActivity() {
                 empId,
                 etEmpName.text.toString(),
                 etEmpAge.text.toString(),
-                etEmpSalary.text.toString()
+                etEmpSalary.text.toString(),
+                etEmpCategory.text.toString()
             )
 
             Toast.makeText(applicationContext, "Employee Data Updated", Toast.LENGTH_LONG).show()
@@ -82,6 +86,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
             tvEmpName.text = etEmpName.text.toString()
             tvEmpAge.text = etEmpAge.text.toString()
             tvEmpSalary.text = etEmpSalary.text.toString()
+            tvEmpCategory.text = etEmpCategory.text.toString()
 
             alertDialog.dismiss()
         }
@@ -91,10 +96,11 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         id: String,
         name: String,
         age: String,
-        salary: String
+        salary: String,
+        category: String
     ) {
         val dbRef = FirebaseDatabase.getInstance().getReference("Employees").child(id)
-        val empInfo = EmployeeModel(id, name, age, salary)
+        val empInfo = EmployeeModel(id, name, age, salary,category)
         dbRef.setValue(empInfo)
     }
 
@@ -103,6 +109,7 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         tvEmpName = findViewById(R.id.tvEmpName)
         tvEmpAge = findViewById(R.id.tvEmpAge)
         tvEmpSalary = findViewById(R.id.tvEmpSalary)
+        tvEmpCategory = findViewById(R.id.tvEmpCategory)
 
         btnUpdate = findViewById(R.id.btnUpdate)
         btnDelete = findViewById(R.id.btnDelete)
@@ -113,27 +120,35 @@ class EmployeeDetailsActivity : AppCompatActivity() {
         tvEmpName.text = intent.getStringExtra("empName")
         tvEmpAge.text = intent.getStringExtra("empAge")
         tvEmpSalary.text = intent.getStringExtra("empSalary")
+        tvEmpCategory.text = intent.getStringExtra("empCategory")
+
 
     }
+
+
 
     private fun deleteRecord(
         id: String
     ){
         val dbRef = FirebaseDatabase.getInstance().getReference("Employees").child(id)
-        val mTask = dbRef.removeValue()
+        AlertDialog.Builder(this)
+            .setTitle("Delete Job")
+            .setMessage("Are you sure you want to delete this Job record?")
+            .setPositiveButton("Yes") { _, _ ->
+                val mTask = dbRef.removeValue()
 
-        mTask.addOnSuccessListener {
-            Toast.makeText(this, "Employee data deleted", Toast.LENGTH_LONG).show()
+                mTask.addOnSuccessListener {
+                    Toast.makeText(this, "Employee data deleted", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, FetchingActivity::class.java)
-            finish()
-            startActivity(intent)
-        }.addOnFailureListener{ error ->
-            Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
-        }
+                    val intent = Intent(this, FetchingActivity::class.java)
+                    finish()
+                    startActivity(intent)
+                }.addOnFailureListener{ error ->
+                    Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+            .setNegativeButton("No", null)
+            .show()
     }
-
-
-
 
 }

@@ -11,7 +11,7 @@
         android:layout_width="162dp"
         android:layout_height="55dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#2196F3"
+        android:backgroundTint="#8BC34A"
         android:text="Update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
@@ -26,7 +26,7 @@
         android:layout_height="54dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#2196F3"
+        android:backgroundTint="#E91E63"
         android:text="Delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -265,6 +265,7 @@
         app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.15"
+        android:layout_marginStart="50dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

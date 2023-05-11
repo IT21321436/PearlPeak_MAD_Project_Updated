@@ -77,17 +77,24 @@ class postedDetailsActivity : AppCompatActivity(){
         id: String
     ){
         val dbRef = FirebaseDatabase.getInstance().getReference("JobPortal").child(id)
-        val mTask = dbRef.removeValue()
+        AlertDialog.Builder(this)
+            .setTitle("Delete Job")
+            .setMessage("Are you sure you want to delete this Job record?")
+            .setPositiveButton("Yes") { _, _ ->
+                val mTask = dbRef.removeValue()
 
-        mTask.addOnSuccessListener {
-            Toast.makeText(this, "Company data deleted", Toast.LENGTH_LONG).show()
+                mTask.addOnSuccessListener {
+                    Toast.makeText(this, "Company data deleted", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, jobFetchingActivity::class.java)
-            finish()
-            startActivity(intent)
-        }.addOnFailureListener{ error ->
-            Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
-        }
+                    val intent = Intent(this, jobFetchingActivity::class.java)
+                    finish()
+                    startActivity(intent)
+                }.addOnFailureListener{ error ->
+                    Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+            .setNegativeButton("No", null)
+            .show()
     }
 
     private fun openUpdateDialog(

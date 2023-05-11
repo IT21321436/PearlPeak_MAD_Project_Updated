@@ -23,12 +23,21 @@
         android:hint="Employee Age" />
 
     <EditText
-        android:id="@+id/etEmpSalary"
+    android:id="@+id/etEmpSalary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:ems="10"
+    android:hint="Employee Salary"
+    android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etCatspinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Employee Salary"
+        android:hint="Employee Category"
         android:inputType="textPersonName" />
 
     <Button

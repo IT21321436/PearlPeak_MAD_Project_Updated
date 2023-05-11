@@ -7,6 +7,19 @@
     android:background="@drawable/app_background"
     tools:context=".activities.EmployeeDetailsActivity">
 
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Applied Job Details "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"/>
+
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"

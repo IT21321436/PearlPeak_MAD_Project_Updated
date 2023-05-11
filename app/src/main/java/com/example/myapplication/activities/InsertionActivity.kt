@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import com.example.myapplication.R
 import com.example.myapplication.models.EmployeeModel
@@ -15,6 +16,7 @@ class InsertionActivity : AppCompatActivity() {
     private lateinit var etEmpName: EditText
     private lateinit var etEmpAge: EditText
     private lateinit var etEmpSalary: EditText
+    private lateinit var companyAppCategory: Spinner
     private lateinit var btnSaveData: Button
 
     private lateinit var dbRef: DatabaseReference
@@ -26,6 +28,7 @@ class InsertionActivity : AppCompatActivity() {
         etEmpName = findViewById(R.id.etEmpName)
         etEmpAge = findViewById(R.id.etEmpAge)
         etEmpSalary = findViewById(R.id.etEmpSalary)
+        companyAppCategory = findViewById(R.id.etCatspinner)
         btnSaveData = findViewById(R.id.btnSave)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Employees")
@@ -41,6 +44,7 @@ class InsertionActivity : AppCompatActivity() {
         val empName = etEmpName.text.toString()
         val empAge = etEmpAge.text.toString()
         val empSalary = etEmpSalary.text.toString()
+        val companyAppCategory = companyAppCategory.selectedItem.toString()
 
         if (empName.isEmpty()) {
             etEmpName.error = "Please enter name"
@@ -54,7 +58,7 @@ class InsertionActivity : AppCompatActivity() {
 
         val empId = dbRef.push().key!!
 
-        val employee = EmployeeModel(empId, empName, empAge, empSalary)
+        val employee = EmployeeModel(empId, empName, empAge, empSalary,companyAppCategory)
 
         dbRef.child(empId).setValue(employee)
             .addOnCompleteListener {

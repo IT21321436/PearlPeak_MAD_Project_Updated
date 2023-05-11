@@ -13,13 +13,13 @@
         android:id="@+id/etEmpName"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="215dp"
         android:ems="10"
         android:hint="Enter name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/titleApply" />
 
     <EditText
         android:id="@+id/etEmpAge"
@@ -40,7 +40,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Enter job category"
+        android:hint="Enter job Salary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmpAge" />
@@ -49,13 +49,41 @@
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="45dp"
         android:backgroundTint="#2196F3"
-        android:textSize="20dp"
         android:text="Save Data"
+        android:textSize="20dp"
         app:icon="@android:drawable/ic_menu_save"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCatspinner" />
+
+    <Spinner
+        android:id="@+id/etCatspinner"
+        android:layout_width="373dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:entries="@array/Job_Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmpSalary" />
+
+    <TextView
+        android:id="@+id/titleApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#6C4242"
+        android:text="Enter Details For Apply to a Job"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
