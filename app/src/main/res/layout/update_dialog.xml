@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="Employee Name"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"/>
 
     <EditText
         android:id="@+id/etEmpAge"
@@ -20,7 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Employee Age" />
+        android:hint="Employee Age"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"/>
 
     <EditText
     android:id="@+id/etEmpSalary"
@@ -29,7 +31,8 @@
     android:layout_marginTop="20dp"
     android:ems="10"
     android:hint="Employee Salary"
-    android:inputType="textPersonName" />
+    android:inputType="textPersonName"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"/>
 
     <EditText
         android:id="@+id/etCatspinner"
@@ -38,7 +41,8 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Employee Category"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"/>
 
     <Button
         android:id="@+id/btnUpdateData"

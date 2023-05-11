@@ -70,7 +70,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/divider_grey">
+                android:backgroundTint="@color/divider_grey"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -79,7 +80,7 @@
                     android:gravity="center"
                     android:text="Company id"
                     android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -95,6 +96,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -119,7 +121,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/divider_grey">
+                android:backgroundTint="@color/divider_grey"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -144,6 +147,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -169,7 +173,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/divider_grey">
+                android:backgroundTint="@color/divider_grey"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -197,6 +202,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -223,7 +229,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/divider_grey">
+                android:backgroundTint="@color/divider_grey"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -252,6 +259,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -277,7 +285,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/divider_grey">
+                android:backgroundTint="@color/divider_grey"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -305,6 +314,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -330,7 +340,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/divider_grey">
+                android:backgroundTint="@color/divider_grey"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -358,6 +369,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 

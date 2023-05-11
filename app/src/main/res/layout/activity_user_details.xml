@@ -85,6 +85,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -133,6 +134,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -181,8 +183,9 @@
                 <TextView
                     android:id="@+id/tvUseEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:gravity="center"
                     android:text=""
                     android:textColor="@color/black"
@@ -239,6 +242,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
+                    android:background="@color/common_google_signin_btn_text_light_disabled"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
