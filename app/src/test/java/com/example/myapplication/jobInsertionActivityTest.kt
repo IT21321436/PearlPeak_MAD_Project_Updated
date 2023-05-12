@@ -9,7 +9,6 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import org.junit.Before
 import org.junit.Test
-
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
@@ -47,8 +46,8 @@ class jobInsertionActivityTest{
 
     @Before
     fun setUp() {
-        MockitoAnnotations.initMocks(this)
-        activity = Mockito.spy(jobInsertionActivity())
+        MockitoAnnotations.openMocks(this)
+        activity = Mockito.spy(jobInsertionActivity::class.java)
         Mockito.`when`(activity.findViewById<EditText>(R.id.editCompanyName))
             .thenReturn(companyNameEditText)
         Mockito.`when`(activity.findViewById<EditText>(R.id.editCompanyEmail))
@@ -61,7 +60,8 @@ class jobInsertionActivityTest{
             .thenReturn(companyDescriptionEditText)
         Mockito.`when`(activity.findViewById<CheckBox>(R.id.companyCheckBox))
             .thenReturn(jobCheckBox)
-        Mockito.`when`(activity.findViewById<Button>(R.id.btnSubmit)).thenReturn(btnSaveData)
+        Mockito.`when`(activity.findViewById<Button>(R.id.btnSubmit))
+            .thenReturn(btnSaveData)
         Mockito.`when`(FirebaseDatabase.getInstance().getReference("JobPortal")).thenReturn(dbRef)
     }
 

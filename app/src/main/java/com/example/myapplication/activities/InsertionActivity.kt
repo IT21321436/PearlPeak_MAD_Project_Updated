@@ -45,16 +45,22 @@ class InsertionActivity : AppCompatActivity() {
         val empAge = etEmpAge.text.toString()
         val empSalary = etEmpSalary.text.toString()
         val companyAppCategory = companyAppCategory.selectedItem.toString()
+        var validInput = true
 
         if (empName.isEmpty()) {
             etEmpName.error = "Please enter name"
+            validInput = false
         }
-        if (empAge.isEmpty()) {
-            etEmpAge.error = "Please enter age"
+        if (empAge.isEmpty() || empAge.length != 2) {
+            etEmpAge.error = "Please enter a valid age"
+            validInput = false
         }
         if (empSalary.isEmpty()) {
             etEmpSalary.error = "Please enter salary"
+            validInput = false
         }
+
+        if (validInput) {
 
         val empId = dbRef.push().key!!
 
@@ -73,7 +79,7 @@ class InsertionActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
 
-
+            }
 
     }
 }

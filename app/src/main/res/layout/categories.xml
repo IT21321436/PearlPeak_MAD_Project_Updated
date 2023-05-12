@@ -80,7 +80,7 @@
                             android:layout_marginTop="@dimen/cardMargin"
                             android:textColor="#6f6f6f"
                             android:textSize="@dimen/textSize"
-                            android:text="Helth"
+                            android:text="Health"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 

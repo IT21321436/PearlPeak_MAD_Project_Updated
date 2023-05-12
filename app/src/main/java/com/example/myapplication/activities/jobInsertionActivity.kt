@@ -1,6 +1,7 @@
 package com.example.myapplication.activities
 
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -61,14 +62,15 @@ class jobInsertionActivity : AppCompatActivity() {
             companyName.error = "Please Enter User Name"
             validInput = false
         }
-        if (Email.isEmpty()) {
+        if (Email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             companyEmail.error = "Please Enter Email Address"
             validInput = false
         }
 
-//        if (CompanyPhone < MIN_PHONE_NUMBER || CompanyPhone > MAX_PHONE_NUMBER) {
-//            companyPhone.error = "Please enter a phone number between $MIN_PHONE_NUMBER and $MAX_PHONE_NUMBER"
-//        }
+       if (CompanyPhone.isEmpty() || CompanyPhone.length != 10) {
+               companyPhone.error = "Please enter a Valid phone number "
+               validInput = false
+        }
 
 //        if (CompanyCategory.isEmpty()) {
 //            companyCategory.error = "Please Enter Category"

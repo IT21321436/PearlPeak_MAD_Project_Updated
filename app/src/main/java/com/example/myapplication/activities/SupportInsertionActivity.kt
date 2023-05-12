@@ -42,35 +42,38 @@ class SupportInsertionActivity : AppCompatActivity() {
         val useName = etUseName.text.toString()
         val useEmail = etUseEmail.text.toString()
         val useDescription = etUseDescription.text.toString()
+        var validInput = true
 
         if (useName.isEmpty()) {
             etUseName.error = "Please enter name"
+            validInput = false
         }
         if (useEmail.isEmpty()) {
             etUseEmail.error = "Please enter email"
+            validInput = false
         }
         if (useDescription.isEmpty()) {
             etUseDescription.error = "Please enter description"
+            validInput = false
         }
+        if (validInput) {
+            val useId = dbRef.push().key!!
 
-        val useId = dbRef.push().key!!
+            val user = UserModel(useId, useName, useEmail, useDescription)
 
-        val user = UserModel(useId, useName, useEmail, useDescription)
+            dbRef.child(useId).setValue(user)
+                .addOnCompleteListener {
+                    Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
 
-
-        dbRef.child(useId).setValue(user)
-            .addOnCompleteListener {
-                Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
-
-                etUseName.text.clear()
-                etUseEmail.text.clear()
-                etUseDescription.text.clear()
+                    etUseName.text.clear()
+                    etUseEmail.text.clear()
+                    etUseDescription.text.clear()
 
 
-            }.addOnFailureListener { err ->
-                Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
-            }
-
+                }.addOnFailureListener { err ->
+                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
+                }
+        }
     }
 
 }

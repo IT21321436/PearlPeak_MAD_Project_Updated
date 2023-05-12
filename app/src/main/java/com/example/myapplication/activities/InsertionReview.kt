@@ -1,6 +1,7 @@
 package com.example.myapplication.activities
 
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -46,12 +47,39 @@ class InsertionReview : AppCompatActivity() {
         val reviewRates = etReviewRates.text.toString()
         val reviewComments = etReviewComments.text.toString()
 
-        if (reviewName.isNotEmpty() && reviewEmail.isNotEmpty() && reviewTel.isNotEmpty() && reviewRates.isNotEmpty() && reviewComments.isNotEmpty()) {
+        var isValid = true
+
+        if (reviewName.isEmpty()) {
+            isValid = false
+            etReviewName.error = "Please enter a name"
+        }
+
+        if (reviewEmail.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(reviewEmail).matches()) {
+            isValid = false
+            etReviewEmail.error = "Please enter a valid email address"
+        }
+
+        if (reviewTel.isEmpty() || reviewTel.length != 10) {
+            isValid = false
+            etReviewTel.error = "Please enter a 10-digit phone number"
+        }
+
+        if (reviewRates.isEmpty() || reviewRates.toFloat() < 0 || reviewRates.toFloat() > 5) {
+            isValid = false
+            etReviewRates.error = "Please enter a rating between 0 and 5"
+        }
+
+        if (reviewComments.isEmpty()) {
+            isValid = false
+            etReviewComments.error = "Please enter a comment"
+        }
+
+        if (isValid) {
             val reviewID = dbRef.push().key!!
 
-            val employee = ModelReview(reviewID, reviewName, reviewEmail, reviewTel, reviewRates, reviewComments)
+            val review = ModelReview(reviewID, reviewName, reviewEmail, reviewTel, reviewRates, reviewComments)
 
-            dbRef.child(reviewID).setValue(employee)
+            dbRef.child(reviewID).setValue(review)
                 .addOnCompleteListener {
                     Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
 
@@ -65,7 +93,7 @@ class InsertionReview : AppCompatActivity() {
                     Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
                 }
         } else {
-            Toast.makeText(this, "Please enter all fields", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Please fill all fields with valid inputs", Toast.LENGTH_LONG).show()
         }
     }
 }
